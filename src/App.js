@@ -63,11 +63,19 @@ function App() {
                     <Routes>
                         <Route
                             path="/password"
-                            element={<CommonPasswordInterface />}
+                            element={
+                                <CommonPasswordInterface
+                                    setGeneratedPassword={setGeneratedPassword}
+                                />
+                            }
                         />
                         <Route
                             path="/diceware"
-                            element={<DicewareInterface />}
+                            element={
+                                <DicewareInterface
+                                    setGeneratedPassword={setGeneratedPassword}
+                                />
+                            }
                         />
                     </Routes>
                 </div>

@@ -2,13 +2,26 @@
  * PassPanda | common password generator interface
  */
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { generate } from "generate-password-browser"
 
-function CommonPasswordInterface() {
+function CommonPasswordInterface({ setGeneratedPassword }) {
     const [length, setLength] = useState(12)
     const [letters, setLetters] = useState(true)
     const [numbers, setNumbers] = useState(true)
     const [specialChars, setSpecialChars] = useState(true)
+
+    useEffect(() => {
+        const res = generate({
+            length,
+            numbers,
+            symbols: specialChars,
+            lowercase: letters,
+            uppercase: letters,
+        })
+
+        setGeneratedPassword(res)
+    }, [length, letters, numbers, specialChars])
 
     return (
         <form>
