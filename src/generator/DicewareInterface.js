@@ -11,7 +11,7 @@ function DicewareInterface() {
         <form>
             <label htmlFor="wordCountInput" className="form-label">
                 Word count:{" "}
-                <span className="badge text-bg-primary">{wordCount}</span>
+                <span className="badge text-bg-primary p-2">{wordCount}</span>
             </label>
             <input
                 type="range"

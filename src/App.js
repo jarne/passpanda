@@ -29,10 +29,10 @@ function App() {
                 <span className="font-monospace fs-4 flex-grow-1">
                     {generatedPassword}
                 </span>
-                <button className="btn btn-primary">
+                <button className="btn btn-outline-primary">
                     <i class="bi bi-clipboard"></i>
                 </button>
-                <button className="btn btn-primary ms-2">
+                <button className="btn btn-outline-primary ms-2">
                     <i class="bi bi-arrow-counterclockwise"></i>
                 </button>
             </div>
@@ -72,6 +72,18 @@ function App() {
                     </Routes>
                 </div>
             </BrowserRouter>
+            <div className="mt-4">
+                <p className="text-end">
+                    <b>PassPanda</b> is{" "}
+                    <a
+                        href="https://github.com/jarne/passpanda"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        open source
+                    </a>
+                </p>
+            </div>
         </div>
     )
 }
