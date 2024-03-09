@@ -26,13 +26,13 @@ function App() {
                 <h1 className="fw-semibold ms-3">PassPanda</h1>
             </div>
             <div className="password-result d-flex align-items-center bg-body-secondary rounded-2 mt-4 mb-4">
-                <span className="font-monospace fs-4 flex-grow-1">
+                <span className="password-result-text font-monospace fs-4 flex-grow-1">
                     {generatedPassword}
                 </span>
-                <button className="btn btn-outline-primary">
+                <button className="btn btn-outline-primary mx-2">
                     <i class="bi bi-clipboard"></i>
                 </button>
-                <button className="btn btn-outline-primary ms-2">
+                <button className="btn btn-outline-primary mx-2">
                     <i class="bi bi-arrow-counterclockwise"></i>
                 </button>
             </div>

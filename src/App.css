@@ -13,6 +13,12 @@
     background-color: red;
 }
 
+.password-result-text {
+    width: 50vw;
+
+    overflow-wrap: break-word;
+}
+
 .generator-options {
     max-width: 540px;
 }
