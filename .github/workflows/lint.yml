@@ -1,0 +1,30 @@
+name: Lint checks
+on: [push]
+jobs:
+    eslint:
+        name: Check using eslint
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install Yarn dependencies
+              run: yarn install --immutable
+
+            - name: Run ESLint
+              run: yarn lint:ci
+
+            - name: Save lint results
+              uses: actions/upload-artifact@v4
+              with:
+                  name: lint-results
+                  path: lint-results
