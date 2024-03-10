@@ -14,8 +14,13 @@
             "versioning": "node"
         },
         {
-            "extends": "group:recommended",
-            "groupName": "recommended package groupings",
+            "extends": "group:react",
+            "groupName": "React",
+            "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+        },
+        {
+            "extends": "group:fortawesome",
+            "groupName": "Font Awesome",
             "matchUpdateTypes": ["digest", "patch", "minor", "major"]
         }
     ]
