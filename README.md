@@ -11,8 +11,8 @@
     <a href="https://github.com/jarne/passpanda/blob/main/package.json">
         <img src="https://img.shields.io/github/package-json/v/jarne/passpanda.svg" alt="Package version">
     </a>
-    <a href="https://circleci.com/gh/jarne/passpanda">
-        <img src="https://circleci.com/gh/jarne/passpanda.svg?style=shield" alt="Build status">
+    <a href="https://github.com/jarne/passpanda/actions/workflows/build-deploy.yml">
+        <img src="https://github.com/jarne/passpanda/actions/workflows/build-deploy.yml/badge.svg" alt="Build and deploy web app status">
     </a>
     <a href="https://github.com/jarne/passpanda/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/jarne/passpanda.svg" alt="License">
