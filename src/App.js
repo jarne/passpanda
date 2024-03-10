@@ -16,6 +16,19 @@ import logo from "./logo.png"
 
 function App() {
     const [generatedPassword, setGeneratedPassword] = useState("")
+    const [regenerateCounter, setRegenerateCounter] = useState(0)
+
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(generatedPassword)
+        } catch (e) {
+            alert("Couldn't copy generated password to clipboard!")
+        }
+    }
+
+    const regenerate = () => {
+        setRegenerateCounter(regenerateCounter + 1)
+    }
 
     return (
         <div className="container mt-4">
@@ -31,10 +44,13 @@ function App() {
                 <span className="password-result-text font-monospace fs-4 flex-grow-1">
                     {generatedPassword}
                 </span>
-                <button className="btn btn-primary mx-2">
+                <button
+                    className="btn btn-primary mx-2"
+                    onClick={copyToClipboard}
+                >
                     <FontAwesomeIcon icon={faClipboard} />
                 </button>
-                <button className="btn btn-primary mx-2">
+                <button className="btn btn-primary mx-2" onClick={regenerate}>
                     <FontAwesomeIcon icon={faRotate} />
                 </button>
             </div>
@@ -68,6 +84,7 @@ function App() {
                             element={
                                 <CommonPasswordInterface
                                     setGeneratedPassword={setGeneratedPassword}
+                                    regenerateCounter={regenerateCounter}
                                 />
                             }
                         />
@@ -76,6 +93,7 @@ function App() {
                             element={
                                 <DicewareInterface
                                     setGeneratedPassword={setGeneratedPassword}
+                                    egenerateCounter={regenerateCounter}
                                 />
                             }
                         />

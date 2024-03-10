@@ -5,7 +5,7 @@
 import { useState, useEffect } from "react"
 import { generate } from "generate-password-browser"
 
-function CommonPasswordInterface({ setGeneratedPassword }) {
+function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }) {
     const [length, setLength] = useState(12)
     const [letters, setLetters] = useState(true)
     const [numbers, setNumbers] = useState(true)
@@ -21,7 +21,7 @@ function CommonPasswordInterface({ setGeneratedPassword }) {
         })
 
         setGeneratedPassword(res)
-    }, [length, letters, numbers, specialChars])
+    }, [length, letters, numbers, specialChars, regenerateCounter])
 
     return (
         <form>
