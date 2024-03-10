@@ -22,6 +22,8 @@ jobs:
 
             - name: Build React app
               run: yarn build
+              env:
+                  PUBLIC_URL: https://pass.wayspace.net
 
             - name: Save build output
               uses: actions/upload-artifact@v4
