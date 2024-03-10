@@ -80,7 +80,7 @@ function App() {
                 <div className="generator-options">
                     <Routes>
                         <Route
-                            path="/password"
+                            path="/"
                             element={
                                 <CommonPasswordInterface
                                     setGeneratedPassword={setGeneratedPassword}
