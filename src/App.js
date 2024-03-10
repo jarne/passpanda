@@ -93,7 +93,7 @@ function App() {
                             element={
                                 <DicewareInterface
                                     setGeneratedPassword={setGeneratedPassword}
-                                    egenerateCounter={regenerateCounter}
+                                    regenerateCounter={regenerateCounter}
                                 />
                             }
                         />

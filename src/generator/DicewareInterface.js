@@ -2,10 +2,18 @@
  * PassPanda | Diceware generator interface
  */
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-function DicewareInterface() {
+import { generatePassphrase } from "./logic/diceGenerator"
+
+function DicewareInterface({ setGeneratedPassword, regenerateCounter }) {
     const [wordCount, setWordCount] = useState(4)
+
+    useEffect(() => {
+        const res = generatePassphrase(wordCount)
+
+        setGeneratedPassword(res)
+    }, [wordCount, regenerateCounter])
 
     return (
         <form>
