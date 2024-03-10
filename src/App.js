@@ -4,11 +4,13 @@
 
 import { useState } from "react"
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faClipboard, faRotate } from "@fortawesome/free-solid-svg-icons"
+
 import DicewareInterface from "./generator/DicewareInterface"
 import CommonPasswordInterface from "./generator/CommonPasswordInterface"
 
 import "./custom.scss"
-import "./../node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
 import "./App.css"
 import logo from "./logo.png"
 
@@ -29,11 +31,11 @@ function App() {
                 <span className="password-result-text font-monospace fs-4 flex-grow-1">
                     {generatedPassword}
                 </span>
-                <button className="btn btn-outline-primary mx-2">
-                    <i class="bi bi-clipboard"></i>
+                <button className="btn btn-primary mx-2">
+                    <FontAwesomeIcon icon={faClipboard} />
                 </button>
-                <button className="btn btn-outline-primary mx-2">
-                    <i class="bi bi-arrow-counterclockwise"></i>
+                <button className="btn btn-primary mx-2">
+                    <FontAwesomeIcon icon={faRotate} />
                 </button>
             </div>
             <BrowserRouter>
