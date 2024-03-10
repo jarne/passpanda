@@ -12,6 +12,11 @@
         {
             "matchPackageNames": ["node"],
             "versioning": "node"
+        },
+        {
+            "extends": "group:recommended",
+            "groupName": "recommended package groupings",
+            "matchUpdateTypes": ["digest", "patch", "minor", "major"]
         }
     ]
 }
