@@ -1,0 +1,57 @@
+name: Build and deploy web app
+on: [push]
+jobs:
+    build:
+        name: Build React app
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install Yarn dependencies
+              run: yarn install --immutable
+
+            - name: Build React app
+              run: yarn build
+
+            - name: Save build output
+              uses: actions/upload-artifact@v4
+              with:
+                  name: app-build-out
+                  path: build
+    deploy:
+        name: Deploy static app to S3
+        if: github.ref == 'refs/heads/main'
+        needs: build
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Restore build output
+              uses: actions/download-artifact@v4
+              with:
+                  name: app-build-out
+                  path: build
+
+            - name: Configure AWS
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: eu-central-1
+
+            - name: Upload to AWS S3
+              run: aws s3 sync public s3://pass.wayspace.net --delete
