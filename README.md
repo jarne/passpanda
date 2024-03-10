@@ -1,0 +1,88 @@
+<p align="center">
+    <img src=".github/media/logo.png" width="120" height="120" alt="PassPanda app logo">
+</p>
+
+<h1 align="center">PassPanda</h1>
+<p align="center">Instantly create robust passwords and passphrases on the web</p>
+
+<br>
+
+<p align="center">
+    <a href="https://github.com/jarne/passpanda/blob/main/package.json">
+        <img src="https://img.shields.io/github/package-json/v/jarne/passpanda.svg" alt="Package version">
+    </a>
+    <a href="https://circleci.com/gh/jarne/passpanda">
+        <img src="https://circleci.com/gh/jarne/passpanda.svg?style=shield" alt="Build status">
+    </a>
+    <a href="https://github.com/jarne/passpanda/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/jarne/passpanda.svg" alt="License">
+    </a>
+</p>
+
+##
+
+[Description](#-description) | [Usage](#-usage) | [Contribution](#-contribution) | [License](#%EF%B8%8F-license)
+
+## 📙 Description
+
+PassPanda is a user-friendly static web application designed to facilitate the generation of secure passwords and Diceware passphrases.
+
+### Features
+
+-   **Password Generation**
+
+    -   Users can generate common passwords with customizable parameters such as length and inclusion of letters, numbers, and special characters.
+
+-   **Diceware Passphrase Generation**
+
+    -   PassPanda offers the generation of Diceware passphrases, leveraging the renowned method of creating strong yet memorable passwords through randomly selected words.
+
+-   Clipboard Copy Functionality
+-   Regenerate Button
+-   Dark Mode
+
+### Screenshots
+
+<img src=".github/media/screenshot_common.png" alt="Common password generation page">
+
+<img src=".github/media/screenshot_passphrase.png" alt="Passphrase generation page">
+
+### Architecture
+
+PassPanda is a static web app based on the React framework and Bootstrap as a style framework.
+It uses the [generate-password-browser](https://www.npmjs.com/package/generate-password-browser) library for generating common passwords.
+For generating diceware passphrases, a custom implementation is used,
+based on the [EFF word list](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
+and the browser's `crypto.getRandomValues` API.
+
+## 🖥 Usage
+
+### Using the hosted version of the app
+
+Use the hosted version at [pass.wayspace.net](https://pass.wayspace.net).
+
+### Build it locally
+
+Clone the repository and install the dependencies using:
+
+```
+$ yarn install
+```
+
+Then run this command to build the web app:
+
+```
+$ yarn build
+```
+
+The built website will be available in the `dist`-folder, just open the `index.html`-file in your browser or upload the files to a web server.
+
+## 🙋‍ Contribution
+
+Contributions are always very welcome! It's completely equal if you're a beginner or a more experienced developer.
+
+Thanks for your interest 🎉👍!
+
+## 👨‍⚖️ License
+
+[MIT](https://github.com/jarne/passpanda/blob/main/LICENSE)
