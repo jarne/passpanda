@@ -58,7 +58,7 @@ function App() {
                 <ul className="nav nav-underline mb-4">
                     <li className="nav-item">
                         <NavLink
-                            to="/password"
+                            to="/"
                             className={({ isActive }) =>
                                 isActive ? "nav-link active" : "nav-link"
                             }
