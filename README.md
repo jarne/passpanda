@@ -5,8 +5,6 @@
 <h1 align="center">PassPanda</h1>
 <p align="center">Instantly create robust passwords and passphrases on the web</p>
 
-<br>
-
 <p align="center">
     <a href="https://github.com/jarne/passpanda/blob/main/package.json">
         <img src="https://img.shields.io/github/package-json/v/jarne/passpanda.svg" alt="Package version">
@@ -19,27 +17,23 @@
     </a>
 </p>
 
-##
-
-[Description](#-description) | [Usage](#-usage) | [Contribution](#-contribution) | [License](#%EF%B8%8F-license)
-
 ## 📙 Description
 
 PassPanda is a user-friendly static web application designed to facilitate the generation of secure passwords and Diceware passphrases.
 
 ### Features
 
--   **Password Generation**
+- **Password Generation**
 
-    -   Users can generate common passwords with customizable parameters such as length and inclusion of letters, numbers, and special characters.
+    - Users can generate common passwords with customizable parameters such as length and inclusion of letters, numbers, and special characters.
 
--   **Diceware Passphrase Generation**
+- **Diceware Passphrase Generation**
 
-    -   PassPanda offers the generation of Diceware passphrases, leveraging the renowned method of creating strong yet memorable passwords through randomly selected words.
+    - PassPanda offers the generation of Diceware passphrases, leveraging the renowned method of creating strong yet memorable passwords through randomly selected words.
 
--   Clipboard Copy Functionality
--   Regenerate Button
--   Dark Mode
+- Clipboard Copy Functionality
+- Regenerate Button
+- Dark Mode
 
 ### Screenshots
 
