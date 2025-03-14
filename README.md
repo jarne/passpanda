@@ -44,10 +44,10 @@ PassPanda is a user-friendly static web application designed to facilitate the g
 ### Architecture
 
 PassPanda is a static web app based on the React framework and Bootstrap as a style framework.
-It uses the [generate-password-browser](https://www.npmjs.com/package/generate-password-browser) library for generating common passwords.
-For generating diceware passphrases, a custom implementation is used,
-based on the [EFF word list](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)
-and the browser's `crypto.getRandomValues` API.
+It uses the [omgopass](https://github.com/Omgovich/omgopass) library for generating memorable passwords.
+For generating common passwords and diceware passphrases, a implementation inside this application is used.
+They both use the browser's secure `crypto.getRandomValues` API, and diceware passphrases are
+based on the [EFF word list](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt).
 
 ## 🖥 Usage
 

@@ -38,6 +38,7 @@
         "@vitejs/plugin-react": "^4.3.4",
         "bootstrap": "^5.3.3",
         "camelcase": "^8.0.0",
+        "omgopass": "^3.2.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-router-dom": "^7.0.0",

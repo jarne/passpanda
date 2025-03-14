@@ -9,6 +9,7 @@ import { faClipboard, faRotate } from "@fortawesome/free-solid-svg-icons"
 
 import DicewareInterface from "./generator/DicewareInterface"
 import CommonPasswordInterface from "./generator/CommonPasswordInterface"
+import MemorablePasswordInterface from "./generator/MemorablePasswordInterface"
 
 import "./custom.scss"
 import "./App.css"
@@ -68,6 +69,16 @@ function App() {
                     </li>
                     <li className="nav-item">
                         <NavLink
+                            to="/memorable"
+                            className={({ isActive }) =>
+                                isActive ? "nav-link active" : "nav-link"
+                            }
+                        >
+                            Memorable
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
                             to="/diceware"
                             className={({ isActive }) =>
                                 isActive ? "nav-link active" : "nav-link"
@@ -83,6 +94,15 @@ function App() {
                             path="/"
                             element={
                                 <CommonPasswordInterface
+                                    setGeneratedPassword={setGeneratedPassword}
+                                    regenerateCounter={regenerateCounter}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/memorable"
+                            element={
+                                <MemorablePasswordInterface
                                     setGeneratedPassword={setGeneratedPassword}
                                     regenerateCounter={regenerateCounter}
                                 />
