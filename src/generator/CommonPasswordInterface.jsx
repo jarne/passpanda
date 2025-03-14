@@ -3,7 +3,7 @@
  */
 
 import { useState, useEffect } from "react"
-import { generate } from "generate-password-browser"
+import { generateRandomString } from "./logic/randomStringGenerator"
 
 function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }) {
     const DEFAULT_LENGTH = 12
@@ -17,13 +17,13 @@ function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }) {
     const [specialChars, setSpecialChars] = useState(DEFAULT_SPECIAL_CHARS)
 
     useEffect(() => {
-        const res = generate({
+        const res = generateRandomString(
             length,
             numbers,
-            symbols: specialChars,
-            lowercase: letters,
-            uppercase: letters,
-        })
+            letters,
+            letters,
+            specialChars
+        )
 
         setGeneratedPassword(res)
     }, [length, letters, numbers, specialChars, regenerateCounter])
