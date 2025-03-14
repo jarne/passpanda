@@ -27,7 +27,7 @@ function MemorablePasswordInterface({
         })
 
         setGeneratedPassword(res)
-    }, [syllablesCount, numbers, titlecased])
+    }, [syllablesCount, numbers, titlecased, regenerateCounter])
 
     return (
         <div>
@@ -74,64 +74,6 @@ function MemorablePasswordInterface({
                     </label>
                 </div>
             </form>
-            {/* <div className="my-3">
-                <p className="fw-bold">Common generation pre-sets</p>
-                <button
-                    className="btn btn-primary m-1"
-                    onClick={() => {
-                        setLength(DEFAULT_LENGTH)
-                        setLetters(DEFAULT_LETTERS)
-                        setNumbers(DEFAULT_NUMBERS)
-                        setSpecialChars(DEFAULT_SPECIAL_CHARS)
-                    }}
-                >
-                    Default
-                </button>
-                <button
-                    className="btn btn-primary m-1"
-                    onClick={() => {
-                        setLength(24)
-                        setLetters(true)
-                        setNumbers(true)
-                        setSpecialChars(false)
-                    }}
-                >
-                    24-char secret
-                </button>
-                <button
-                    className="btn btn-primary m-1"
-                    onClick={() => {
-                        setLength(32)
-                        setLetters(true)
-                        setNumbers(true)
-                        setSpecialChars(false)
-                    }}
-                >
-                    32-char secret
-                </button>
-                <button
-                    className="btn btn-primary m-1"
-                    onClick={() => {
-                        setLength(4)
-                        setLetters(false)
-                        setNumbers(true)
-                        setSpecialChars(false)
-                    }}
-                >
-                    4-digit PIN
-                </button>
-                <button
-                    className="btn btn-primary m-1"
-                    onClick={() => {
-                        setLength(6)
-                        setLetters(false)
-                        setNumbers(true)
-                        setSpecialChars(false)
-                    }}
-                >
-                    6-digit PIN
-                </button>
-            </div> */}
         </div>
     )
 }
