@@ -5,8 +5,7 @@
 import camelCase from "camelcase"
 
 import { words } from "./../util/effLargeWordlist"
-
-const SPECIAL_CHARS = "!$&/()=?*+#_.:"
+import { SPECIAL_CHARS } from "./../util/charCollections"
 
 /**
  * Generate dice passphrase
