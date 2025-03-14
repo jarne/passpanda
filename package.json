@@ -29,7 +29,7 @@
         "preview": "vite preview",
         "lint": "eslint .",
         "lint:ci": "eslint --format junit --output-file ./lint-results/eslint/junit.xml .",
-        "format": "prettier --write \"**/*.{js,json,html,css,scss,yml,md}\""
+        "format": "prettier --write \"**/*.{js,jsx,json,html,css,scss,yml,md}\""
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
