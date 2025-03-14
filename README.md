@@ -27,9 +27,13 @@ PassPanda is a user-friendly static web application designed to facilitate the g
 
     - Users can generate common passwords with customizable parameters such as length and inclusion of letters, numbers, and special characters.
 
+- **Easily Memorable Passwords**
+
+    - PassPanda can also generate easily memorable passwords using the [omgopass library](https://github.com/Omgovich/omgopass), which creates passwords that are both strong and simple to recall.
+
 - **Diceware Passphrase Generation**
 
-    - PassPanda offers the generation of Diceware passphrases, leveraging the renowned method of creating strong yet memorable passwords through randomly selected words.
+    - PassPanda offers the generation of Diceware passphrases (based on the [EFF word list](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt)), leveraging the renowned method of creating strong yet memorable passwords through randomly selected words.
 
 - Clipboard Copy Functionality
 - Regenerate Button
@@ -38,6 +42,8 @@ PassPanda is a user-friendly static web application designed to facilitate the g
 ### Screenshots
 
 <img src=".github/media/screenshot_common.png" alt="Common password generation page">
+
+<img src=".github/media/screenshot_memorable.png" alt="Memorable password generation page">
 
 <img src=".github/media/screenshot_passphrase.png" alt="Passphrase generation page">
 
