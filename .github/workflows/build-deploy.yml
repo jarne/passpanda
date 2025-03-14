@@ -28,8 +28,8 @@ jobs:
             - name: Save build output
               uses: actions/upload-artifact@v4
               with:
-                  name: app-build-out
-                  path: build
+                  name: app-dist
+                  path: dist
     deploy:
         name: Deploy static app to S3
         if: github.ref == 'refs/heads/main'
@@ -45,8 +45,8 @@ jobs:
             - name: Restore build output
               uses: actions/download-artifact@v4
               with:
-                  name: app-build-out
-                  path: build
+                  name: app-dist
+                  path: dist
 
             - name: Configure AWS
               uses: aws-actions/configure-aws-credentials@v4
