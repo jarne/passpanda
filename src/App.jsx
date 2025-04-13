@@ -22,7 +22,7 @@ function App() {
     const copyToClipboard = async () => {
         try {
             await navigator.clipboard.writeText(generatedPassword)
-        } catch (e) {
+        } catch {
             alert("Couldn't copy generated password to clipboard!")
         }
     }
