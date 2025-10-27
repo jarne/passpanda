@@ -24,7 +24,7 @@ jobs:
               run: yarn lint:ci
 
             - name: Save lint results
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v5
               with:
                   name: lint-results
                   path: lint-results
