@@ -11,8 +11,8 @@ export default defineConfig([
     {
         files: [allJsTsFiles],
         ...js.configs.recommended,
-        ...tseslint.configs.recommended,
     },
+    tseslint.configs.recommended,
     {
         files: [allJsTsFiles],
         ...jsdoc.configs["flat/recommended"],
