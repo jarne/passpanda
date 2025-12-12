@@ -1,5 +1,6 @@
 import { defineConfig } from "eslint/config"
 import js from "@eslint/js"
+import tseslint from "typescript-eslint"
 import globals from "globals"
 import jsdoc from "eslint-plugin-jsdoc"
 import react from "eslint-plugin-react"
@@ -10,6 +11,7 @@ export default defineConfig([
     {
         files: [allJsTsFiles],
         ...js.configs.recommended,
+        ...tseslint.configs.recommended,
     },
     {
         files: [allJsTsFiles],
