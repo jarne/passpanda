@@ -11,20 +11,19 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v6
 
+            - name: Setup Pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+
             - name: Setup Node.js
               uses: actions/setup-node@v6
               with:
                   node-version: 24
-                  cache: yarn
+                  cache: pnpm
 
-            - name: Install Yarn dependencies
-              run: yarn install --immutable
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
 
             - name: Run ESLint
-              run: yarn lint:ci
-
-            - name: Save lint results
-              uses: actions/upload-artifact@v5
-              with:
-                  name: lint-results
-                  path: lint-results
+              run: pnpm run lint

@@ -5,7 +5,7 @@
  * data provided by EFF under CC BY 3.0 US DEED license
  */
 
-export const words = {
+export const words: Record<number, string> = {
     11111: "abacus",
     11112: "abdomen",
     11113: "abdominal",

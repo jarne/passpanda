@@ -63,13 +63,13 @@ Use the hosted version at [pass.wayspace.net](https://pass.wayspace.net).
 Clone the repository and install the dependencies using:
 
 ```
-$ yarn install
+$ pnpm install
 ```
 
 Then run this command to build the web app:
 
 ```
-$ yarn build
+$ pnpm run build
 ```
 
 The built website will be available in the `dist`-folder, just open the `index.html`-file in your browser or upload the files to a web server.

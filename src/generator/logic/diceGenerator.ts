@@ -4,15 +4,13 @@
 
 import camelCase from "camelcase"
 
-import { words } from "./../util/effLargeWordlist"
-import { SPECIAL_CHARS } from "./../util/charCollections"
+import { words } from "../util/effLargeWordlist"
+import { SPECIAL_CHARS } from "../util/charCollections"
 
 /**
  * Generate dice passphrase
- * @param {number} wordCount Amount of words to generate
- * @returns {string} generated passphrase
  */
-export const generatePassphrase = (wordCount) => {
+export const generatePassphrase = (wordCount: number): string => {
     let res = ""
 
     for (let i = 0; i < wordCount; i++) {
@@ -29,9 +27,8 @@ export const generatePassphrase = (wordCount) => {
 
 /**
  * Generate a random character or nothing
- * @returns {string} random character
  */
-export const getRandomCharacterBetween = () => {
+export const getRandomCharacterBetween = (): string => {
     const insertCharacter = randInt(0, 2)
 
     if (insertCharacter !== 0) {
@@ -50,9 +47,8 @@ export const getRandomCharacterBetween = () => {
 
 /**
  * Get a random word from the dice list
- * @returns {string} random word
  */
-export const getRandomWord = () => {
+export const getRandomWord = (): string => {
     const idLength = 5
     let results = ""
 
@@ -62,24 +58,22 @@ export const getRandomWord = () => {
         results = results.concat(diceRes.toString())
     }
 
-    return words[results]
+    return words[Number(results)]
 }
 
 /**
- * Virtually throw dice
- * @returns {number} Random number between 1 and 6
+ * Virtually throw dice to get random
+ * number between 1 and 6
  */
-const throwDice = () => {
+const throwDice = (): number => {
     return randInt(1, 6)
 }
 
 /**
  * Generate cryptographically secure random number
- * @param {number} min Minimum (integer)
- * @param {number} max Maximum (integer)
- * @returns {number} Random integer between min and max
+ * between min and max
  */
-const randInt = (min, max) => {
+const randInt = (min: number, max: number): number => {
     const randBuffer = new Uint32Array(1)
 
     window.crypto.getRandomValues(randBuffer)
