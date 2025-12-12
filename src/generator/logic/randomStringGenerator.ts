@@ -7,24 +7,18 @@ import {
     LOWERCASE_LETTERS,
     NUMBERS,
     SPECIAL_CHARS,
-} from "./../util/charCollections"
+} from "../util/charCollections"
 
 /**
- * Generate random string
- * @param {number} length String length
- * @param {boolean} numbers Use numbers
- * @param {boolean} uppercaseLetters Use uppercase letters
- * @param {boolean} lowercaseLetters Use lowercase letters
- * @param {boolean} specialChars Use special characters
- * @returns {string} generated random string
+ * Generate a random string
  */
 export const generateRandomString = (
-    length,
-    numbers,
-    uppercaseLetters,
-    lowercaseLetters,
-    specialChars
-) => {
+    length: number,
+    numbers: boolean,
+    uppercaseLetters: boolean,
+    lowercaseLetters: boolean,
+    specialChars: boolean
+): string => {
     let chars = ""
 
     if (numbers) chars += NUMBERS
