@@ -2,10 +2,15 @@
  * PassPanda | common password generator interface
  */
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, type Dispatch, type SetStateAction } from "react"
 import { generateRandomString } from "./logic/randomStringGenerator"
 
-function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }) {
+interface CommonPasswordInterfaceProps {
+    setGeneratedPassword: Dispatch<SetStateAction<string>>,
+    regenerateCounter: number
+}
+
+function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }: CommonPasswordInterfaceProps) {
     const DEFAULT_LENGTH = 12
     const DEFAULT_LETTERS = true
     const DEFAULT_NUMBERS = true
@@ -40,7 +45,7 @@ function CommonPasswordInterface({ setGeneratedPassword, regenerateCounter }) {
                         className="form-control"
                         id="lengthInput"
                         value={length}
-                        onChange={(e) => setLength(e.target.value)}
+                        onChange={(e) => setLength(Number(e.target.value))}
                         min={1}
                         max={128}
                     />

@@ -2,13 +2,18 @@
  * PassPanda | memorable password generator interface
  */
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, type Dispatch, type SetStateAction } from "react"
 import generatePassword from "omgopass"
+
+interface MemorablePasswordInterfaceProps {
+    setGeneratedPassword: Dispatch<SetStateAction<string>>,
+    regenerateCounter: number
+}
 
 function MemorablePasswordInterface({
     setGeneratedPassword,
     regenerateCounter,
-}) {
+}: MemorablePasswordInterfaceProps) {
     const DEFAULT_SYLLABLES_COUNT = 3
     const DEFAULT_NUMBERS = true
     const DEFAULT_TITLECASED = true
@@ -41,7 +46,7 @@ function MemorablePasswordInterface({
                         className="form-control"
                         id="syllablesInput"
                         value={syllablesCount}
-                        onChange={(e) => setSyllablesCount(e.target.value)}
+                        onChange={(e) => setSyllablesCount(Number(e.target.value))}
                         min={1}
                         max={32}
                     />

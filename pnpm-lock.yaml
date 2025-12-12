@@ -51,6 +51,9 @@ importers:
       '@types/node':
         specifier: ^25.0.1
         version: 25.0.1
+      '@types/omgopass':
+        specifier: ^3.2.3
+        version: 3.2.3
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.7
@@ -634,6 +637,9 @@ packages:
 
   '@types/node@25.0.1':
     resolution: {integrity: sha512-czWPzKIAXucn9PtsttxmumiQ9N0ok9FrBwgRWrwmVLlp86BrMExzvXRLFYRJ+Ex3g6yqj+KuaxfX1JTgV2lpfg==}
+
+  '@types/omgopass@3.2.3':
+    resolution: {integrity: sha512-tBihWcBapTQb2tLgtAJ3kepzeP/Qg9lvem2VSsYbkttKMINRBfUWFUDGqP9QXSukIqjK4qpDnNaOiwKHNQpQfA==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -2181,6 +2187,8 @@ snapshots:
   '@types/node@25.0.1':
     dependencies:
       undici-types: 7.16.0
+
+  '@types/omgopass@3.2.3': {}
 
   '@types/react-dom@19.2.3(@types/react@19.2.7)':
     dependencies:

@@ -2,11 +2,16 @@
  * PassPanda | Diceware generator interface
  */
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, type Dispatch, type SetStateAction } from "react"
 
 import { generatePassphrase } from "./logic/diceGenerator"
 
-function DicewareInterface({ setGeneratedPassword, regenerateCounter }) {
+interface DicewareInterfaceProps {
+    setGeneratedPassword: Dispatch<SetStateAction<string>>,
+    regenerateCounter: number
+}
+
+function DicewareInterface({ setGeneratedPassword, regenerateCounter }: DicewareInterfaceProps) {
     const [wordCount, setWordCount] = useState(4)
 
     useEffect(() => {
@@ -26,7 +31,7 @@ function DicewareInterface({ setGeneratedPassword, regenerateCounter }) {
                 className="form-range"
                 id="wordCountInput"
                 value={wordCount}
-                onChange={(e) => setWordCount(e.target.value)}
+                onChange={(e) => setWordCount(Number(e.target.value))}
                 min={3}
                 max={8}
             />
