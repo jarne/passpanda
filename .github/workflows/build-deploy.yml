@@ -28,7 +28,7 @@ jobs:
             - name: Build React app
               run: pnpm run build
               env:
-                  PUBLIC_URL: https://pass.wayspace.net
+                  PUBLIC_URL: https://pass.yellowlake.net
 
             - name: Save build output
               uses: actions/upload-artifact@v6

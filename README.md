@@ -56,7 +56,7 @@ based on the [EFF word list](https://www.eff.org/files/2016/07/18/eff_large_word
 
 ### Using the hosted version of the app
 
-Use the hosted version at [pass.wayspace.net](https://pass.wayspace.net).
+Use the hosted version at [pass.yellowlake.net](https://pass.yellowlake.net).
 
 ### Build it locally
 
